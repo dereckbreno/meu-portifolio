@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="style/main.css"> >
+</head>
+<body>
+
+   <!-- ...existing code... -->
+<header class="header header-bg">
+    <nav>
+        <div class="logo">Meu Portfolio</div>
+        <ul class="nav-list">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+<!-- ...existing code... -->
+    <!-- Conteúdo principal -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Olá, eu sou <span>DERECK BRENO</span></h1>
+                <p>Desenvolvedor Front-end & Estudante de Direito</p>
+                <button class="btn-primary">Ver Projetos</button>
+                
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Meu nome é Breno, tenho 22 anos e atualmente sou estudante de Direito, mas encontrei no mundo da tecnologia uma nova paixão: o desenvolvimento front-end. Sempre fui curioso e criativo, e isso me levou a explorar como ideias podem ganhar vida através do código e do design.
+
+Meu objetivo é unir técnica e sensibilidade, criando interfaces funcionais, bonitas e que transmitam experiências reais para quem as utiliza. Estou em constante aprendizado, buscando aprimorar minhas habilidades em HTML, CSS, JavaScript e outras ferramentas que tornam a web mais dinâmica e acessível.
+
+Além do lado acadêmico e profissional, sou uma pessoa que acredita na importância de transformar desafios em força. Encaro cada novo conhecimento como uma oportunidade de crescer e deixar minha marca.
+
+Seja bem-vindo(a) ao meu portfólio — aqui compartilho parte do que venho construindo nessa jornada no front-end. 🚀</p>
+
+
+                <div class="skills">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">SASS</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Meus Projetos</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Projeto 1</h3>
+                        <p>Landing Page Responsiva:
+Projeto desenvolvido com HTML, CSS e JavaScript, focado em criar uma página moderna e adaptável a diferentes dispositivos. Trabalhei conceitos de responsividade, tipografia e usabilidade para entregar uma experiência clara e agradável ao usuário.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projeto 2</h3>
+                        <p>To-Do List Interativa:
+Aplicação simples de lista de tarefas construída em JavaScript. O objetivo foi praticar manipulação do DOM e lógica de programação, além de explorar como pequenas funcionalidades podem gerar impacto real no dia a dia.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Projeto 3</h3>
+                        <p>Portfólio Pessoal
+Meu portfólio online, criado para apresentar meus projetos e trajetória no front-end. Desenvolvido com HTML, CSS e um toque de JavaScript, reforçou meus conhecimentos em design, estruturação de páginas e organização de conteúdo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2023 Meu Portfolio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // JavaScript para o menu mobile
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-list').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
