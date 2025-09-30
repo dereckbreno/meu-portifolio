@@ -1,0 +1,51 @@
+.projects {
+    background-color: $gray-light;
+    padding: $spacing-lg 0;
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-md;
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: $spacing-md;
+        color: $primary-color;
+    }
+    
+    .project-grid {
+        display: grid;
+        gap: $spacing-md;
+        grid-template-columns: 1fr;
+        
+        @include respond-to($breakpoint-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @include respond-to($breakpoint-desktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    .project-card {
+        background-color: $white;
+        padding: $spacing-md;
+        border-radius: $border-radius;
+        @include box-shadow();
+        transition: $transition;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        h3 {
+            color: $primary-color;
+            margin-bottom: $spacing-sm / 2;
+        }
+        
+        p {
+            color: $gray-dark;
+        }
+    }
+}

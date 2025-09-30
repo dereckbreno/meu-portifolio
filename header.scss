@@ -1,0 +1,67 @@
+.header {
+    background-color: $primary-color;
+    padding: $spacing-sm;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    
+    nav {
+        @include flex-center(row);
+        justify-content: space-between;
+        
+        .logo {
+            color: $white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .nav-list {
+            display: none;
+            list-style: none;
+            
+            @include respond-to($breakpoint-tablet) {
+                display: flex;
+                gap: $spacing-md;
+            }
+            
+            li a {
+                color: $white;
+                text-decoration: none;
+                transition: $transition;
+                
+                &:hover {
+                    color: darken($white, 20%);
+                }
+            }
+            
+            &.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: $primary-color;
+                padding: $spacing-md;
+            }
+        }
+        
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            
+            @include respond-to($breakpoint-tablet) {
+                display: none;
+            }
+            
+            span {
+                width: 25px;
+                height: 3px;
+                background-color: $white;
+                margin: 2px 0;
+            }
+        }
+    }
+}

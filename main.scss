@@ -1,0 +1,87 @@
+
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+/* ...existing code... */
+.header-bg {
+    background-image: url('../assets/eu.imagem.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50px; /* ajuste conforme necessário */
+    color: #fff; /* para garantir contraste */
+    position: relative;
+}
+/* ...existing code... */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: $font-size-base;
+    color: $text-color;
+    background: $background-color;
+    line-height: 1.6;
+}
+
+// Estilos para a seção Hero
+.hero {
+    @include flex-center(column);
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    text-align: center;
+    padding: 0 $spacing-md;
+    
+    .hero-content {
+        max-width: 800px;
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: $spacing-sm;
+            
+            @include respond-to($breakpoint-tablet) {
+                font-size: 3.5rem;
+            }
+            
+            span {
+                color: $primary-color;
+            }
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: $spacing-md;
+            
+            @include respond-to($breakpoint-tablet) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    @include button-style();
+}
+
+// Ajustes de espaçamento para o header fixo
+main {
+    margin-top: 60px; // Altura aproximada do header
+    
+    section {
+        padding: $spacing-lg 0;
+    }
+}
+
+// Estilos para links de navegação suave
+html {
+    scroll-behavior: smooth;
+}
